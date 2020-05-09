@@ -52,6 +52,8 @@ func startMonitor4Server(s string) {
 		pinger, err := ping.NewPinger(s)
 		if err != nil {
 			log.Printf("ping server %s error: %s\n", s, err.Error())
+			lostRate.DeleteLabelValues(s)
+			delayTime.DeleteLabelValues(s)
 		} else {
 			pinger.SetPrivileged(true)
 			pinger.Count = 10

@@ -1,6 +1,8 @@
 # net-delay-time-exporter
 Service that ping remote server and collect delay time metric for Prometheus consumption
 
+**IMPORTANT** There will be problems running net-delay-time-exporter in docker desktop for mac, see [issue](https://github.com/docker/for-mac/issues/57)
+
 ## Install
 
 ```sh
